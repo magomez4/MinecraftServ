@@ -1,15 +1,21 @@
-#Followed this tutorial to install/run/setup minecraft server:
+# Followed this tutorial to install/run/setup minecraft server:
 https://www.tomshardware.com/how-to/raspberry-pi-minecraft-server
+I modified the auto-start bash script. Instead of re-running every 10 seconds, it runs only once at startup. If it ever crashes, the raspberry pi would have to be reboot or re-run the command below manually from the minecraft screen (see reference below on how to use `screen` program). 
 
 
-#To run minecraft server:
+# To run minecraft server:
 java -Xmx1024M -Xms1024M -jar server.jar
 
+# To attach to minecraft server screen:
+screen -r minecraft_screen
+## To detach:
+`ctrl-a d` (let go of ctrl-a before pressing d)
 
-#General Notes
+
+# General Notes
 For minecraft server version 1.20.2, I had to install java 17
 
-##To intall java 17:
+## To intall java 17:
 
 Vanilla java 17 only works on 64 bit systems, so I had to install a port of java 17 that was built for 32 bit systems. 
 
@@ -61,3 +67,4 @@ update-alternatives --display javac
 #check if java is running
 java -version
 ```
+
