@@ -2,9 +2,14 @@
 https://www.tomshardware.com/how-to/raspberry-pi-minecraft-server
 I modified the auto-start bash script. Instead of re-running every 10 seconds, it runs only once at startup. If it ever crashes, the raspberry pi would have to be reboot or re-run the command below manually from the minecraft screen (see reference below on how to use `screen` program). 
 
+# To update minecraft server:
+Folloed this tutorial: https://wiki.sportskeeda.com/minecraft/how-to-update-server-minecraft#:~:text=To%20update%20a%20server%20in%20Minecraft%2C%20create%20a%20new%20folder,executable%20into%20the%20old%20folder
 
 # To run minecraft server:
 java -Xmx1024M -Xms1024M -jar server.jar
+
+# Top stop minecraft server:
+Attach to the minecraft command line screen and run `\stop`
 
 # To attach to minecraft server screen:
 screen -r minecraft_screen
